@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 /* variables for styling easily */
 :root {
@@ -9,8 +9,8 @@
   --accent-color: #eaeaea;
 
   --logo-font: "Fira Sans", sans-serif;
-  --primary-font: "Helvetica", "Red Hat Display", sans-serif;
-  --accent-font: sans-serif;
+  --primary-font: "Roboto", sans-serif;
+  --accent-font: "Roboto", sans-serif;
   --button-color-1: #c80000;
   --button-color-2: #eaeaea;
 
