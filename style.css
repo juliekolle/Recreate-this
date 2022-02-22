@@ -12,6 +12,10 @@
   --primary-font: "Red Hat Display", sans-serif;
   --accent-font: sans-serif;
   --button-color-1: #c80000;
+  --button-color-2: #eaeaea;
+
+  --hover-button-color-1: #aa0101;
+  --hover-button-color-2: #d4d4d4;
 }
 
 body {
@@ -25,14 +29,12 @@ header p {
 
 header {
   border-bottom: var(--accent-color) solid 2px;
-  height: 60px;
-  background-color: #fff;
-  position: relative;
+  background-color: #ffffff;
   z-index: 9999;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   flex-direction: row;
-  justify-content: space-around;
+  min-width: 0;
 }
 
 header h1 {
@@ -40,6 +42,10 @@ header h1 {
   font-family: var(--logo-font);
   letter-spacing: -0.08em;
   text-align: center;
+  margin: 0;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
 header h1 span {
@@ -56,6 +62,7 @@ button {
 }
 .redButton {
   max-width: fit-content;
+  /* max-height: 2rem; */
   padding: 0.6rem 1.1rem 0.6rem 1.1rem;
   text-align: center;
   border-radius: 20px;
@@ -64,12 +71,22 @@ button {
   color: var(--bg-color);
 }
 
+.redButton:hover {
+  background-color: var(--hover-button-color-1);
+}
+
 .greyButton {
   max-width: fit-content;
+  /* max-height: 2rem; */
   padding: 0.6rem 1.1rem 0.6rem 1.1rem;
   text-align: center;
   border-radius: 20px;
   border-width: 0;
+  background-color: var(--button-color-2);
+}
+
+.greyButton:hover {
+  background-color: var(--hover-button-color-2);
 }
 
 .arrowButton {
@@ -78,10 +95,12 @@ button {
   border-width: 1px;
   border-color: var(--accent-color);
   max-width: fit-content;
+  max-height: 2rem;
   padding: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: turn;
 }
 
 .arrowIcon {
@@ -95,6 +114,12 @@ button {
   padding-left: 15vw;
   padding-right: 2vw;
 }
+
+.turn:hover {
+  /* transform: rotate(150deg); */
+  animation: turn 0.8s ease-out;
+}
+
 /* endButtons */
 
 img {
@@ -106,7 +131,53 @@ img {
   color: var(--accent-font-color);
 }
 
-.searchBar {
+.searchBarArea {
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.searchBar {
+  max-width: 110%;
+  max-height: 2rem;
+  padding-right: 10rem;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border: solid;
+  border-width: 0;
+  font-size: 0.8rem;
+}
+
+.searchBar img {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+/* Animation keyframes */
+@keyframes turn {
+  0% {
+    transform: rotate(initial);
+  }
+
+  20% {
+    transform: rotate(70deg);
+  }
+
+  40% {
+    transform: rotate(110deg);
+  }
+
+  60% {
+    transform: rotate(70deg);
+  }
+
+  80% {
+    transform: rotate(110deg);
+  }
 }
