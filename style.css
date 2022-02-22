@@ -181,3 +181,19 @@ img {
     transform: rotate(110deg);
   }
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.ingredientsHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* article .recipe {
+  padding: ;
+} */
