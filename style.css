@@ -9,7 +9,7 @@
   --accent-color: #eaeaea;
 
   --logo-font: "Fira Sans", sans-serif;
-  --primary-font: "Red Hat Display", sans-serif;
+  --primary-font: "Helvetica", "Red Hat Display", sans-serif;
   --accent-font: sans-serif;
   --button-color-1: #c80000;
   --button-color-2: #eaeaea;
@@ -28,7 +28,7 @@ header p {
 }
 
 header {
-  border-bottom: var(--accent-color) solid 2px;
+  border-bottom: var(--accent-color) solid 1px;
   background-color: #ffffff;
   z-index: 9999;
   display: grid;
@@ -54,6 +54,12 @@ header h1 span {
 
 .smallIcon {
   max-width: 1.5rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* BUTTONS */
@@ -122,13 +128,35 @@ button {
 
 /* endButtons */
 
-img {
-  max-width: 10rem;
-}
-
 .infoBar p {
   font-family: var(--accent-font);
   color: var(--accent-font-color);
+}
+
+.infoBar div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 33%;
+  border-left: var(--accent-color) 1px solid;
+  border-right: var(--accent-color) 1px solid;
+}
+
+.infoBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 100%;
+  border-bottom: var(--accent-color) 1px solid;
+  padding: 2rem;
+}
+
+.infoBar img {
+  border-radius: 100%;
+  max-width: 2.5rem;
+  min-width: 2.5rem;
+  max-height: 2rem;
 }
 
 .searchBarArea {
@@ -197,3 +225,40 @@ main {
 /* article .recipe {
   padding: ;
 } */
+
+.recipePresentation {
+  display: flex;
+  padding-top: 3.5rem;
+  padding-left: 21rem;
+  padding-right: 21rem;
+  flex-direction: column;
+  align-items: center;
+}
+.recipeImage {
+  max-width: 100%;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+h3 {
+  font-family: var(--primary-font);
+  margin: 0%;
+}
+
+p {
+  font-family: var(--accent-font);
+  margin: 0;
+}
+
+.recipePresentation p {
+  color: var(--accent-font-color);
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0.4rem;
+}
