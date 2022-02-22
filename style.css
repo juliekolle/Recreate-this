@@ -9,8 +9,8 @@
   --accent-color: #eaeaea;
 
   --logo-font: "Fira Sans", sans-serif;
-  --primary-font: "Roboto", sans-serif;
-  --accent-font: "Roboto", sans-serif;
+  --primary-font: "BlinkMacSystemFont", "Roboto", sans-serif;
+  --accent-font: "BlinkMacSystemFont", "Roboto", sans-serif;
   --button-color-1: #c80000;
   --button-color-2: #eaeaea;
 
@@ -38,8 +38,9 @@ header {
 }
 
 header h1 {
-  font-weight: 100;
+  font-weight: 200;
   font-family: var(--logo-font);
+  font-size: 2.2rem;
   letter-spacing: -0.08em;
   text-align: center;
   margin: 0;
@@ -130,10 +131,12 @@ button {
 
 .infoBar p {
   font-family: var(--accent-font);
-  color: var(--accent-font-color);
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  font-weight: 150;
 }
 
-.infoBar div {
+.infoBar .creatorSmallImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,6 +144,10 @@ button {
   min-width: 33%;
   border-left: var(--accent-color) 1px solid;
   border-right: var(--accent-color) 1px solid;
+  grid-row-gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: rgb(80, 79, 79);
 }
 
 .infoBar {
@@ -154,9 +161,11 @@ button {
 
 .infoBar img {
   border-radius: 100%;
-  max-width: 2.5rem;
-  min-width: 2.5rem;
-  max-height: 2rem;
+  border: var(--accent-color) 2px solid;
+  padding: 0.1rem;
+  max-width: 3.2rem;
+  min-width: 3.2rem;
+  max-height: 3.2rem;
 }
 
 .searchBarArea {
@@ -282,4 +291,60 @@ p {
   padding: 1rem 1rem 1rem 0;
   justify-content: left;
   grid-column-gap: 0.6rem;
+}
+
+.veganTime {
+  font-weight: 350;
+  color: var(--accent-font-color);
+  font-size: 0.9rem;
+}
+
+.infoBar h4 {
+  font-family: var(--primary-font);
+  font-size: 2.2rem;
+  letter-spacing: 0.04rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: bottom;
+  margin: 0;
+}
+
+.infoBar h4 span {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+.infoBar div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 33%;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+}
+
+section article img {
+  max-height: 14rem;
+  min-width: 14rem;
+}
+
+section article div {
+  position: relative;
+  text-align: top;
+}
+
+section article div h2 {
+  padding: 0;
+  font-size: 1rem;
+  color: #503d3d;
+  position: absolute;
+  background-color: #aa0101;
 }
